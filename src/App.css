@@ -1,38 +1,209 @@
-.App {
+/* General App Styles */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.app-header {
+  background-color: #f0f2f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-nav {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #1877f2;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background-color: #e4e6eb;
+}
+
+.app-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.app-footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #65676b;
+}
+
+/* Post Card Styles */
+.post-card {
+  padding: 15px;
+  border: 1px solid #e4e6eb;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+}
+
+.post-content {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.post-meta {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  color: #65676b;
+  font-size: 0.9em;
+}
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #e4e6eb;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  color: #65676b;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.action-button:hover {
+  background-color: #f0f2f5;
+}
+
+/* User Card Styles */
+.user-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #e4e6eb;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+}
+
+.user-rank {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-right: 15px;
+  color: #1877f2;
+  min-width: 20px;
+  text-align: center;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1877f2;
+  color: white;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.user-info {
+  flex-grow: 1;
+}
+
+.user-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.user-stats {
+  display: flex;
+  gap: 10px;
+  font-size: 0.9em;
+  color: #65676b;
+}
+
+.follow-button {
+  background-color: #1877f2;
   color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.follow-button:hover {
+  background-color: #166fe5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Feed Filters */
+.feed-header,
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.feed-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-button {
+  background: none;
+  border: 1px solid #e4e6eb;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  background-color: #1877f2;
+  color: white;
+  border-color: #1877f2;
+}
+
+/* Search Input */
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  padding: 8px 15px;
+  border: 1px solid #e4e6eb;
+  border-radius: 20px;
+  width: 200px;
+  font-size: 0.9em;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1877f2;
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #65676b;
 }
